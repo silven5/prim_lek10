@@ -1,0 +1,16 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Press+Start+2P&display=swap');
+
+$font-fam:'Lobster';
+h2
+{
+font-family:  'Amatic SC', cursive;
+    font-size: 140%;
+    font-weight: bolder;
+}
+h3
+{
+    font-family: $font-fam;
+    font-size: 120%;
+}

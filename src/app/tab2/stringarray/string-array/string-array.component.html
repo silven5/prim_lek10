@@ -1,0 +1,26 @@
+
+      <form [formGroup]="arrayForm" (ngSubmit)="onSubmit()">
+<ion-card formArrayName="message">
+  <ion-card-header>
+    <h2>Введіть повідомлення</h2>
+  </ion-card-header>
+  <ion-card-content>
+<ion-item *ngFor="let message of arrayForm.controls.message.controls; let i = index">
+  <ion-input  type="text" formControlName={{i}}></ion-input> 
+  <ion-button color="tertiary"(click)="deleteMessage(i)">
+  <ion-icon slot="start" name="trash"></ion-icon>
+  Видалити
+</ion-button>
+</ion-item>
+  <ion-button color="tertiary" (click)="addMessage()">
+  <ion-icon slot="start" name="add"></ion-icon>
+  Додати повідомлення
+</ion-button>
+
+<ion-button type="submit"   expand="block" fill="outline" >Відправити</ion-button>
+</ion-card-content>
+</ion-card>
+</form>
+
+  
+

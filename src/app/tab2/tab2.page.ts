@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { Message } from './stringarray/string-array/message';
+import { StringArrayComponent } from './stringarray/string-array/string-array.component';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +8,17 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor() {}
+  message: Message=new Message([]);
+  constructor() { }
+  //Метод для отримання даних з дочірньої форми
+  newMessage(event)
+  {
+    this.message = event;
+    console.log(this.message);
+  }
+  X(x: number)
+  {
+    return x;
+  }
 
 }
