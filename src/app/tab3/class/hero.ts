@@ -16,10 +16,10 @@ export class Hero implements IRun
     }
     show()
     {
-        return "Герой на ім'я " + this.name + "З силою " + this.power;
+        this.about.push( "Герой на ім'я " + this.name + " сила = " + this.power);
     }
       run() 
     {
-        return ("Герой вміє бігати " + " зі швидкістю" + this.runningSpeed);
+        this.about.push( ("Герой вміє бігати " + " швидкість = " + this.runningSpeed));
     }
 }

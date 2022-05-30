@@ -13,13 +13,13 @@ font-weight: bolder;
   width: 170px;
   height: 12px;
   position: absolute;
-  left: 10%; top: 60%;
+  left: 10%; top: 20%;
   transition: top 1.5s;
 }
 .canvas {
-    background: #333;
-  overflow-x: hidden;
-  height: 256px;
+  background: #333;
+  overflow: hidden;
+  height: 250px;
   cursor: pointer;
   position: relative;
   background: url('https://i.imgur.com/FLqikK8.png?1');
@@ -28,12 +28,13 @@ font-weight: bolder;
 }
 .pipe {
   width: 26px;
-  height: 256px;
+  height:250px;
   position: absolute;
   top: 0; left: 100%;
   animation: passby 30s linear infinite;
   background: url("https://i.imgur.com/9Cxyyur.png");
-  background-position-y: -75px;
+  background-position-y: -35px;
+ 
 }
 
 .pipe:nth-of-type(2) {

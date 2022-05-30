@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+ <app-explore-container ></app-explore-container>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <h2>Async pipe. Приклад 1</h2>
+    </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h2>Async Hero Message and AsyncPipe</h2>
+    <ion-item>Message: {{ message$ | async }}</ion-item>
+    <ion-button (click)="resend()">Resend</ion-button>`,
+</ion-card-content>
+</ion-card>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <h2>Async pipe. Приклад 2</h2>
+    </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h2>Heroes from JSON File</h2>
+    <ion-item *ngFor="let hero of ('https://api.jsonbin.io/b/627e03ff019db467969d06f5' | fetchJson) "> {{hero.name}}</ion-item>
+   <ion-item>
+     <ion-label>
+       <h3>
+         Heroes as JSON:
+        </h3>
+         {{'https://api.jsonbin.io/b/627e03ff019db467969d06f5' | fetchJson | json}}
+     </ion-label>
+   </ion-item>
+</ion-card-content>
+</ion-card>
+</ion-content>
+

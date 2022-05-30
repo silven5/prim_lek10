@@ -1,17 +1,61 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
+ <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      <h2>Pure vs Impure pipe</h2>
+    </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      
+        <h2>Загальний список героїв</h2>
+        <ion-card *ngFor="let hero of allHero">
+          <ion-item *ngFor="let item of hero.about">
+            {{item}}
+            </ion-item>
+        </ion-card>
+        
+        <h2>Лише ті хто може літати</h2>
+        <ion-card *ngFor="let hero of allHero | flyingHeroes">
+          <ion-item *ngFor="let item of hero.about">
+            {{item}}
+            </ion-item>
+        </ion-card>
+       <ion-card>
+         <ion-card-header>
+           <ion-text color="primary"><h3>Додати герояя, що вміє літати: </h3></ion-text>
+         </ion-card-header>
+        <ion-item>
+          <ion-label position="floating" >Ім'я</ion-label>
+          <ion-input type="text" value="Грифон" #heroname></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Сила</ion-label>
+          <ion-input type="number" value="3" #heropower></ion-input>
+        </ion-item>
+         <ion-item>
+          <ion-label position="floating" >Швидкість бігу</ion-label>
+          <ion-input type="number" value="2" #herospeed></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Метод польоту</ion-label>
+          <ion-input type="text" value="Крила" #herofm></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating" >Швидкість польоту</ion-label>
+          <ion-input type="number" value="50" #herofs></ion-input>
+        </ion-item>
+        <ion-button (click)="addFlyingHero(heroname.value, heropower.value, herofm.value, herofs.value,herospeed.value)">Додати</ion-button>
+</ion-card>
+        
+  
+        
+    </ion-card-content>
+  
+</ion-card>
+ 
 </ion-content>

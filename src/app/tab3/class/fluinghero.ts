@@ -12,7 +12,7 @@ export class FlyingHero extends Hero implements IFly
     }
     fly() 
     {
-       return "Герой вміє літати за допмогою " + this.flyingMethod + " зі швидкістю" + this.flyingSpeed;
+       this.about.push( "Метод польоту - " + this.flyingMethod + " швидкість = " + this.flyingSpeed);
     }
   
 }
