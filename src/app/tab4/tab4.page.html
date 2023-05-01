@@ -24,13 +24,13 @@
     </ion-card-header>
     <ion-card-content>
       <h2>Heroes from JSON File</h2>
-    <ion-item *ngFor="let hero of ('https://api.jsonbin.io/b/627e03ff019db467969d06f5' | fetchJson) "> {{hero.name}}</ion-item>
+    <ion-item *ngFor="let hero of ('https://api.jsonbin.io/v3/b/644f98ad9d312622a3556488' | fetchJson) "> {{hero.name}}</ion-item>
    <ion-item>
      <ion-label>
        <h3>
          Heroes as JSON:
         </h3>
-         {{'https://api.jsonbin.io/b/627e03ff019db467969d06f5' | fetchJson | json}}
+         {{'https://api.jsonbin.io/v3/b/644f98ad9d312622a3556488' | fetchJson | json}}
      </ion-label>
    </ion-item>
 </ion-card-content>

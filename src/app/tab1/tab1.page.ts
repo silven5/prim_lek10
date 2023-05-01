@@ -10,6 +10,6 @@ export class Tab1Page {
   myNumber = 3.1415;
   myMoney = 225.25;
   myText = "Hello world";
-  constructor() {}
+  constructor() { }
 
 }
