@@ -5,17 +5,18 @@ import { HttpClient } from '@angular/common/http';
   pure: false
 })
 export class FetchJsonPipe implements PipeTransform {
-private cachedData: any = null;
+  private cachedData: any = null;
   private cachedUrl = '';
   constructor(private http: HttpClient) { }
-  transform(url: string): any  {
-     if (url !== this.cachedUrl) {
+  transform(url: string): any {
+    if (url !== this.cachedUrl) {
       this.cachedData = null;
       this.cachedUrl = url;
-      this.http.get(url).subscribe(result => this.cachedData = result);
+      this.http.get(url).subscribe(result => { this.cachedData = result; this.cachedData = this.cachedData.record; }
+      );
     }
-
     return this.cachedData;
+
   }
 
 }
