@@ -1,0 +1,31 @@
+<app-my-header></app-my-header>
+
+<ion-content>
+<ion-card >
+  <ion-card-header>
+    <ion-card-title><h2>Директива атрибуту</h2></ion-card-title>
+    <ion-card-subtitle><h3>Приклади </h3></ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+     <ion-item> <span appMyAtrDirective>Директива. Приклад 1</span></ion-item>
+  <ion-item> <span selectedSize="28px" defaultSize="14px" appMyAtrDirectiveActive>Директива. Приклад 2</span></ion-item>
+  </ion-card-content>
+</ion-card>
+<ion-card >
+  <ion-card-header>
+    <ion-card-title><h2>Структурні директиви</h2></ion-card-title>
+    <ion-card-subtitle><h3>Приклади </h3></ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+     <!-- <ion-item> <span appMyAtrDirective>Директива. Приклад 1</span></ion-item> -->
+     <ion-item>
+      <ion-label *appMyWhile="toggle; let message = hello">
+        {{message}}
+      </ion-label>
+ <ion-toggle (ionChange)="update($event)" labelPlacement="fixed"></ion-toggle>
+</ion-item>
+  </ion-card-content>
+</ion-card>
+</ion-content>
