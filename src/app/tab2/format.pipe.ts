@@ -1,12 +1,11 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'format'
+  name: 'format',
 })
 export class FormatPipe implements PipeTransform {
-//Перетворюємо у рядок і замінюємо точку на кому
+  //Перетворюємо у рядок і замінюємо точку на кому
   transform(value: number, ...args: unknown[]): string {
-    return value.toString().replace(".", ",");
+    return value.toString().replace('.', ',');
   }
-
 }

@@ -5,20 +5,17 @@ import { StringArrayComponent } from './stringarray/string-array/string-array.co
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  styleUrls: ['tab2.page.scss'],
 })
 export class Tab2Page {
-  message: Message=new Message([]);
-  constructor() { }
+  message: Message = new Message([]);
+  constructor() {}
   //Метод для отримання даних з дочірньої форми
-  newMessage(event)
-  {
+  newMessage(event) {
     this.message = event;
     console.log(this.message);
   }
-  X(x: number)
-  {
+  X(x: any) {
     return x;
   }
-
 }

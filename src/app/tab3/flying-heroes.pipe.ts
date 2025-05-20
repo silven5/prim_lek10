@@ -4,12 +4,10 @@ import { FlyingHero } from './class/fluinghero';
 @Pipe({
   name: 'flyingHeroes',
   //!Для того, щоб зробити impure треба розкоментувати рядок
-  // pure: false
+  //pure: false,
 })
 export class FlyingHeroesPipe implements PipeTransform {
-
   transform(allHeroes: Hero[]): Hero[] {
-    return allHeroes.filter(hero => hero instanceof FlyingHero)
+    return allHeroes.filter((hero) => hero instanceof FlyingHero);
   }
-
 }

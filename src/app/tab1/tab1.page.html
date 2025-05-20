@@ -1,42 +1,74 @@
 <ion-header [translucent]="true">
- 
-<app-explore-container></app-explore-container>
-  
+  <app-explore-container></app-explore-container>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<ion-card>
-  <ion-card-header>
-    <ion-card-title>
-      <h2>Приклади вбудованих pipe</h2>
-    </ion-card-title>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <h2>Приклади вбудованих pipe</h2>
+      </ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      
-        <h2>Дата</h2>
-        
-        <ion-item> <ion-text color="secondary"><h3>Без форматування: </h3> </ion-text> {{myDate}}</ion-item>
-        <ion-item><ion-text color="primary"><h3>З форматуванням: </h3></ion-text> {{myDate | date}}</ion-item>
-        <ion-item><ion-text color="dark"><h3>З форматуванням та парметрами: </h3></ion-text> {{myDate | date:"dd/MM/yyyy"}}</ion-item>
-     <h2>Числа</h2>
-        
-        <ion-item> <ion-text color="secondary"><h3>Без форматування: </h3> </ion-text> {{myNumber}}</ion-item>
-        <!--Мінімальна кількість знаків у цілій частині  два, у дробовій - 1, максимальна у дробовій 2 2-->
-        <ion-item><ion-text color="primary"><h3>Форматування два знаки до коми, два після: </h3></ion-text> {{myNumber | number:'1.1-2'}}</ion-item>
-        <ion-item><ion-text color="dark"><h3>Інше форматування: </h3></ion-text> {{myNumber | number:'3.5-5'}}</ion-item>
-        <h2>Валюта</h2>
-        
-        <ion-item> <ion-text color="secondary"><h3>Без форматування: </h3> </ion-text> {{myMoney}}</ion-item>
-        <!--Відображення коду та символу валюти-->
-        <ion-item><ion-text color="primary"><h3>З кодом та символом: </h3></ion-text> {{myMoney | currency:'UAH':'symbol-narrow'}}</ion-item>
-        <ion-item><ion-text color="dark"><h3>Інше форматування: </h3></ion-text> {{myMoney| currency:'UAH':'symbol-narrow':'1.1-1'}}</ion-item>
-        <h2>Ланцюжок pipe</h2>
-        
-        <ion-item> <ion-text color="secondary"><h3>Без форматування: </h3> </ion-text> {{myText}}</ion-item>
-        <!--Відображення коду та символу валюти-->
-        <ion-item><ion-text color="primary"><h3>Ланцюжок: </h3></ion-text> {{myText | slice:6:11 | uppercase}}</ion-item>
-        
+      <h2>Дата</h2>
+
+      <ion-item>
+        <ion-text color="secondary"><h3>Без форматування:</h3> </ion-text>
+        {{myDate}}</ion-item
+      >
+      <ion-item
+        ><ion-text color="primary"><h3>З форматуванням:</h3></ion-text> {{myDate
+        | date}}</ion-item
+      >
+      <ion-item
+        ><ion-text color="dark"
+          ><h3>З форматуванням та парметрами:</h3></ion-text
+        >
+        {{myDate | date:"dd.MM.yyyy"}}</ion-item
+      >
+      <h2>Числа</h2>
+
+      <ion-item>
+        <ion-text color="secondary"><h3>Без форматування:</h3> </ion-text>
+        {{myNumber}}</ion-item
+      >
+      <!--Мінімальна кількість знаків у цілій частині  два, у дробовій - 1, максимальна у дробовій 2 2-->
+      <ion-item
+        ><ion-text color="primary"
+          ><h3>Форматування два знаки до коми, два після:</h3></ion-text
+        >
+        {{myNumber | number:'1.1-2'}}</ion-item
+      >
+      <ion-item
+        ><ion-text color="dark"><h3>Інше форматування:</h3></ion-text>
+        {{myNumber | number:'3.5-5'}}</ion-item
+      >
+      <h2>Валюта</h2>
+
+      <ion-item>
+        <ion-text color="secondary"><h3>Без форматування:</h3> </ion-text>
+        {{myMoney}}</ion-item
+      >
+      <!--Відображення коду та символу валюти-->
+      <ion-item
+        ><ion-text color="primary"><h3>З кодом та символом:</h3></ion-text>
+        {{myMoney | currency:'UAH':'symbol-narrow'}}</ion-item
+      >
+      <ion-item
+        ><ion-text color="dark"><h3>Інше форматування:</h3></ion-text>
+        {{myMoney| currency:'UAH':'symbol-narrow':'1.1-1'}}</ion-item
+      >
+      <h2>Ланцюжок pipe</h2>
+
+      <ion-item>
+        <ion-text color="secondary"><h3>Без форматування:</h3> </ion-text>
+        {{myText}}</ion-item
+      >
+      <!--Ланцюжки пайпів-->
+      <ion-item
+        ><ion-text color="primary"><h3>Ланцюжок:</h3></ion-text> {{myText |
+        slice:6:11 | uppercase}}</ion-item
+      >
     </ion-card-content>
-  
-</ion-card>
+  </ion-card>
 </ion-content>

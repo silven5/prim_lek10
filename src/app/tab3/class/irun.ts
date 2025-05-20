@@ -1,6 +1,4 @@
-export interface IRun 
-{
-   
+export interface IRun {
     runningSpeed: number;
     run();
 }
